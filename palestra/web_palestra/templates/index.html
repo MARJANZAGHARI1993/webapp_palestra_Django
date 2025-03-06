@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palestra Orientale - Home</title>
+  <link rel="icon" href="{% static 'imgStatiche/logo.png' %}" type="image/png">
+  <link rel="stylesheet" href="{% static 'css/indexStyle.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+<header>
+  <a href="{% url 'home' %}">
+    <img id="logo1" src="{% static 'imgStatiche/logo.png' %}" alt="logo Elemental Gym">
+  </a>
+  <div class="header-title">
+    <h1>Elemental Flow</h1>
+    <h5>Palestra Orientale</h5>
+  </div>
+  <!-- Hamburger Icon -->
+  <div class="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li class="dropdown">
+        <a href="#">Discipline â–¾</a>
+        <div class="dropdown-content">
+          <a href="{% url 'discipline_yoga' %}">Yoga</a>
+          <a href="{% url 'discipline_qigong' %}">Qigong</a>
+          <a href="{% url 'discipline_tai_chi' %}">Tai Chi</a>
+          <a href="{% url 'discipline_pilates' %}">Pilates</a>
+        </div>
+      </li>
+      <li><a href="{% url 'insegnanti' %}">Insegnanti</a></li>
+      <li><a href="{% url 'calendario' %}">Calendario</a></li>
+      <li><a href="{% url 'chisiamo' %}">Chi Siamo</a></li>
+    </ul>
+  </nav>
+  <div class="login-button-container">
+    <button id="userIcon" class="user-icon">
+      <a href="{% url 'login' %}">
+        <i class="fa-solid fa-user"></i>
+      </a>
+    </button>
+  </div>
+</header>
+
+<section class="sezione-slideshow">
+  <h2>Elemental flow</h2>
+  <a href="{% url 'chisiamo' %}" class="bottone-slideshow">INIZIA</a>
+  <!-- Carosello di Immagini -->
+  <ul class="slideshow">
+    <li><span></span></li>
+    <li><span></span></li>
+    <li><span></span></li>
+    <li><span></span></li>
+    <li><span></span></li>
+    <li><span></span></li>
+    <li><span></span></li>
+    <li><span></span></li>
+  </ul>
+</section>
+
+<section class="section-gallery">
+  <h1 class="titolo-gallery">La Nostra Palestra</h1>
+  <div class="gallery-container">
+    <div class="gallery-item" data-image="{% static 'img/Palestra3.jpg' %}">
+      <img src="{% static 'img/Palestra3.jpg' %}" alt="Immagine della Palestra 3">
+    </div>
+    <div class="gallery-item" data-image="{% static 'img/Palestra4.jpeg' %}">
+      <img src="{% static 'img/Palestra4.jpeg' %}" alt="Immagine della Palestra 4">
+    </div>
+    <div class="gallery-item" data-image="{% static 'img/Palestra5.jpg' %}">
+      <img src="{% static 'img/Palestra5.jpg' %}" alt="Immagine della Palestra 5">
+    </div>
+    <div class="gallery-item" data-image="{% static 'img/Palestra6.jpg' %}">
+      <img src="{% static 'img/Palestra6.jpg' %}" alt="Immagine della Palestra 6">
+    </div>
+    <div class="gallery-item" data-image="{% static 'img/Palestra8.jpg' %}">
+      <img src="{% static 'img/Palestra8.jpg' %}" alt="Immagine della Palestra 8">
+    </div>
+    <div class="gallery-item" data-image="{% static 'img/Palestra9.jpg' %}">
+      <img src="{% static 'img/Palestra9.jpg' %}" alt="Immagine della Palestra 9">
+    </div>
+    <div class="gallery-item" data-image="{% static 'img/Palestra10.jpg' %}">
+      <img src="{% static 'img/Palestra10.jpg' %}" alt="Immagine della Palestra 10">
+    </div>
+    <div class="gallery-item" data-image="{% static 'img/Palestra11.jpg' %}">
+      <img src="{% static 'img/Palestra11.jpg' %}" alt="Immagine della Palestra 11">
+    </div>
+  </div>
+
+  <!-- Overlay per l'immagine ingrandita -->
+  <div id="image-overlay">
+    <span class="close-button">×</span>
+    <img id="overlay-image" src="" alt="Immagine ingrandita">
+  </div>
+</section>
+
+<!-- Sezione Discipline (con link) -->
+<h1>Le Nostre Discipline</h1>
+<ul class="discipline-list">
+  <li><a href="{% url 'discipline_yoga' %}" title="Yoga"><img src="{% static 'img/disciplinayoga2.JPG' %}" alt="Yoga" width="250" height="250">
+    <h1>Yoga</h1> <br>
+    <p> Lezione di rilassamento e consapevolezza del corpo e della mente.</p></a></li>
+  <li><a href="{% url 'discipline_qigong' %}" title="Qigong"><img src="{% static 'img/disciplinaqigong2.JPG' %}" alt="Qigong" width="250" height="250">
+    <h1>Qigong</h1><br>
+    <p>Antica pratica cinese per il benessere e l'energia vitale.</p></a></li>
+  <li><a href="{% url 'discipline_tai_chi' %}" title="Tai Chi"><img src="{% static 'img/disciplinatai2.JPG' %}" alt="Qigong" width="250" height="250">
+    <h1>Tai Chi</h1>
+    <p>Arte marziale morbida per equilibrio e flessibilità.</p></a></li>
+  <li><a href="{% url 'discipline_pilates' %}" title="Pilates"><img src="{% static 'img/disciplinapilates1.JPG' %}" alt="Qigong" width="250" height="250">
+    <h1>Pilates</h1>
+    <p>Esercizi per rafforzare il core e migliorare la postura.</p></a></li>
+</ul>
+
+<br><br>
+
+<!-- Sezione Insegnanti -->
+<h1>I Nostri Insegnanti</h1>
+<div class="teacher-container">
+  <div class="teacher-card">
+    <a href="{% url 'insegnanti' %}">
+      <img src="{% static 'img/saragialli.png' %}" alt="Sara Gialli"></a>
+    <p><strong>Insegnante Yoga:</strong>
+      <p><em>Sara Gialli</em></p>
+    <p><strong>Esperienza:</strong>
+      <p>10 anni di pratica e insegnamento.</p>
+  </div>
+  <div class="teacher-card">
+    <a href="{% url 'insegnanti' %}">
+      <img src="{% static 'img/giulia_bianchi.jpg' %}" alt="Giulia Bianchi"></a>
+    <p><strong>Insegnante Pilates:</strong>
+      <p><em>Giulia Bianchi</em></p>
+    <p><strong>Esperienza:</strong>
+      <p>12 anni di esperienza.</p>
+  </div>
+</div>
+
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

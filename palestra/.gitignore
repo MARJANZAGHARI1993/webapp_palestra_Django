@@ -1,0 +1,16 @@
+# Ignora la cartella virtual environment
+venv/
+
+# Ignora file di configurazione e dipendenze locali
+.env
+.vscode/
+__pycache__/
+
+# Ignora i file di database SQLite
+db.sqlite3
+db.sqlite3-journal
+
+# Ignora file di cache di Python
+*.pyc
+*.pyo
+*.pyd
